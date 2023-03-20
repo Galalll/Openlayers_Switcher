@@ -19,7 +19,6 @@ const stadiamap = new ol.layer.Tile({
   visible: false,
 });
 
-// console.log(OSM);
 const group = new ol.layer.Group({
   layers: [osm, stadiamap],
 });
@@ -38,31 +37,6 @@ swither.forEach((swith) => {
   });
 });
 
-// const NYCneig = new ol.layer.Tile({
-//   source: new ol.source.TileWMS({
-//     url: "http://localhost:5005/geoserver/Egypt/nyc_neighborhoods/ows",
-//     params: { LAYERS: "	Egypt:nyc_neighborhoods", TILED: true },
-//     serverType: "geoserver",
-//     // Countries have transparency, so do not fade tiles:
-//     transition: 0,
-//   }),
-//   style: new ol.style.Style({
-//     fill: new ol.style.Fill({ color: "#84ace0" }),
-//     stroke: new ol.style.Stroke({ color: "#84ace0", width: 3 }),
-//   }),
-// });
-
-// const vectorLayer = new ol.layer.Vector({
-//   // background: "#1a2b39",
-//   source: new ol.source.Vector({
-//     url: "/map.geojson",
-//     format: new ol.format.GeoJSON(),
-//   }),
-//   style: new ol.style.Style({
-//     fill: new ol.style.Fill({ color: "#84ace0" }),
-//     stroke: new ol.style.Stroke({ color: "#34eb7a", width: 3 }),
-//   }),
-// });
 const vectorLayer = new ol.layer.Vector({
   // background: "#1a2b39",
   source: new ol.source.Vector({
